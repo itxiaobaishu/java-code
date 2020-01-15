@@ -5,7 +5,7 @@ import lombok.Data;
 
 /**
  * @author xiaobai
- * @description: TODO
+ * @description: 测试实体类
  * @date 2020/1/14 11:53 上午
  */
 @Data
