@@ -1,5 +1,7 @@
 package com.xiaobai.javacode.jdk8.stream;
 
+import com.xiaobai.javacode.entity.Student;
+
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;

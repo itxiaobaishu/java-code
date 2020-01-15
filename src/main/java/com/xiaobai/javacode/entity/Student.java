@@ -1,7 +1,9 @@
-package com.xiaobai.javacode.jdk8.stream;
+package com.xiaobai.javacode.entity;
 
 import lombok.Builder;
 import lombok.Data;
+
+import java.io.Serializable;
 
 /**
  * @author xiaobai
@@ -10,7 +12,9 @@ import lombok.Data;
  */
 @Data
 @Builder
-public class Student {
+public class Student implements Serializable {
+
+    private static final long serialVersionUID = 1697173278920274933L;
 
     private String id;
 
