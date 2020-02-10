@@ -5,3 +5,5 @@
 2.jdk8中LocalDate、LocalTime、LocalDateTime的方法测试(包路径：com.xiaobai.javacode.jdk8.date)
 
 3.增加redis配置，使用双重检测锁解决高并发缓存穿透问题(测试方法：启动项目，访问http://localhost:8080/cache/penetrate)
+
+4.spring的使用@Value注解属性注入的7种方式测试(JavaCodeApplicationTests类中的propertyConfigTest测试方法，涉及的文件PropertyConfig、test.txt、test.properties、PropertyService)
