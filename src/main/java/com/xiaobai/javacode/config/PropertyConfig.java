@@ -17,7 +17,7 @@ import org.springframework.core.io.Resource;
  */
 
 @Configuration
-@PropertySource("classpath:test.properties")//7.注入配置文件
+@PropertySource("classpath:propertytest.properties")//7.注入配置文件方式一
 public class PropertyConfig {
 
     /**
@@ -47,7 +47,7 @@ public class PropertyConfig {
     /**
      * 5.注入文件资源
      */
-    @Value("classpath:test.txt")
+    @Value("classpath:propertytest.txt")
     private Resource testFile;
 
     /**
@@ -57,25 +57,27 @@ public class PropertyConfig {
     private Resource testUrl;
 
     /**
-     * 7.注入配置文件
+     * 7.注入配置文件方式一
      */
     @Value("${test.property}")
     private String testProperty;
 
     /**
-     * 7/注入配置文件
+     * 7/注入配置文件方式二
      */
     @Autowired
     private Environment environment;
 
     /**
-     * 7.注入配置文件
+     * 7.注入配置文件方式一
+     * 官方文档写着需要配置一个PropertySourcesPlaceholderConfigurer的Bean
+     * 不配置也可以读到 TODO 需要研究
      * @return
      */
-    @Bean
-    public static PropertySourcesPlaceholderConfigurer propertyConfigurer() {
-        return new PropertySourcesPlaceholderConfigurer();
-    }
+//    @Bean
+//    public static PropertySourcesPlaceholderConfigurer propertyConfigurer() {
+//        return new PropertySourcesPlaceholderConfigurer();
+//    }
 
     public void outputResoure() {
         try {
