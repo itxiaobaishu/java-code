@@ -9,3 +9,5 @@
 4.spring的使用@Value注解属性注入的7种方式测试(JavaCodeApplicationTests类中的propertyConfigTest测试方法，涉及的文件PropertyConfig、propertytest.txt、propertytest.properties、PropertyService)
 
 5.条件注解@Conditional的使用测试(运行condition包下的Main类中的main方法，查看结果)
+
+6.properties文件中的属性值如果为中文读取出来会乱码，总结了两种解决方案(涉及到的代码有PropertiesUtil、propertytest.properties两个文件，测试方法运行PropertiesUtil中的main方法)
