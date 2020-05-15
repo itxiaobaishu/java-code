@@ -22,7 +22,7 @@ public class ConsumerTest {
         };
         Consumer<Person> greeter02 = (p) -> System.out.println("Hello, " + p.firstName);
         greeter02.accept(new Person("Luke", "Skywalker")); //Hello, Luke
-        Consumer<Person> greeter03 = new MyConsumer<Person>()::accept; // 也可以通过定义类和方法的方式去调用，这样才是实际开发的姿势
+        Consumer<Person> greeter03 = new MyConsumer()::accept; // 也可以通过定义类和方法的方式去调用，这样才是实际开发的姿势
         greeter03.accept(new Person("Luke", "Skywalker")); //Hello, Luke
     }
 }

@@ -17,7 +17,7 @@ public class OptionalTest {
         optional.get(); // "bam"
         optional.orElse("fallback"); // "bam"
         optional.ifPresent((s) -> System.out.println(s.charAt(0))); // "b"
-        Optional<Person> optionalPerson = Optional.of(new Person());
+        Optional<Person> optionalPerson = Optional.of(new Person("lily","wang"));
         optionalPerson.ifPresent(s -> System.out.println(s.firstName));
     }
 }

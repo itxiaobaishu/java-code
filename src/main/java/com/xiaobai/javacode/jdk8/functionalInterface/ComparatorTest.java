@@ -16,7 +16,9 @@ public class ComparatorTest {
         Comparator<Person> comparator02 = Comparator.comparing(p -> p.firstName); //等同于上面的方式
         Person p1 = new Person("John", "Doe");
         Person p2 = new Person("Alice", "Wonderland");
-        comparator01.compare(p1, p2); // > 0
-        comparator02.reversed().compare(p1, p2); // < 0
+        int compare01 = comparator01.compare(p1, p2);// > 0
+        int compare02 = comparator02.reversed().compare(p1, p2); // < 0
+        System.out.println(compare01);
+        System.out.println(compare02);
     }
 }
