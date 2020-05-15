@@ -88,7 +88,10 @@ public class ListUtil {
         //倒序
 //        return list.stream().sorted(Comparator.comparing(Student::getId).reversed()).collect(Collectors.toList());
         //升序
-        return list.stream().sorted(Comparator.comparing(Student::getId)).collect(toList());
+//        return list.stream().sorted(Comparator.comparing(Student::getId)).collect(toList());
+        //按照两个字段排序
+        return list.stream().sorted(Comparator.comparing(Student::getId).thenComparing(Student::getAge)).collect(toList());
+
     }
 
     /**
@@ -183,5 +186,15 @@ public class ListUtil {
         return sb.toString();
     }
 
+    /**
+     * 给list的每个元素添加个序号
+     *
+     * @param list
+     * @return
+     */
+    public List<Student> listAddOrder(List<Student> list) {
+        Integer[] arr = {1};
+        return list.stream().peek(student -> student.setOrderId(arr[0]++)).collect(toList());
+    }
 
 }

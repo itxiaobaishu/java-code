@@ -23,4 +23,7 @@ public class Student implements Serializable {
     private Integer age;
 
     private String sex;
+
+    //排序的字段
+    private Integer orderId;
 }

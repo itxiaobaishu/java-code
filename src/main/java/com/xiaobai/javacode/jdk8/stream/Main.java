@@ -76,8 +76,8 @@ public class Main {
         /**
          * 测试reducing
          */
-        List reduce = lambda.reduce();
-        System.out.println(reduce);
+//        List reduce = lambda.reduce();
+//        System.out.println(reduce);
 
 
         /**
@@ -92,6 +92,12 @@ public class Main {
 //        String joining = lambda.list2joining(list);
 //        System.out.println(joining);
 
+
+        /**
+         * 测试list添加序号
+         */
+        List<Student> students = lambda.listAddOrder(list);
+        System.out.println(students);
 
     }
 }
