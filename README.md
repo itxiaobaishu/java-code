@@ -11,3 +11,5 @@
 5.条件注解@Conditional的使用测试(运行condition包下的Main类中的main方法，查看结果)
 
 6.properties文件中的属性值如果为中文读取出来会乱码，总结了两种解决方案(涉及到的代码有PropertiesUtil、propertytest.properties两个文件，测试方法运行PropertiesUtil中的main方法)
+
+7.新增jdk8的函数式接口测试类(包路径：com.xiaobai.javacode.jdk8.functionalInterface)，不完善需修改
