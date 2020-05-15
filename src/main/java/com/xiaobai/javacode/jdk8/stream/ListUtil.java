@@ -197,4 +197,32 @@ public class ListUtil {
         return list.stream().peek(student -> student.setOrderId(arr[0]++)).collect(toList());
     }
 
+    /**
+     * 集合是否存在匹配元素
+     *
+     * @param list
+     * @param matchStr
+     * @return
+     */
+    public boolean match(List<Student> list, String matchStr) {
+
+        //验证是否存在匹配，匹配到第一个即返回true
+//        return list.stream().anyMatch(student -> student.getName().startsWith(matchStr));
+        //验证是否都匹配，全都匹配返回true
+//        return list.stream().allMatch(student -> student.getName().startsWith(matchStr));
+        //验证是否都不匹配，全都不匹配返回true
+        return list.stream().noneMatch(student -> student.getName().startsWith(matchStr));
+    }
+
+    /**
+     * 统计总数
+     *
+     * @param list
+     * @param matchStr
+     * @return
+     */
+    public long count(List<Student> list, String matchStr) {
+        return list.stream().filter(student -> student.getName().startsWith(matchStr)).count();
+    }
+
 }
