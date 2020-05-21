@@ -3,7 +3,7 @@ package com.xiaobai.javacode.entity;
 import java.util.function.Consumer;
 
 /**
- * @author danyu
+ * @author xiaobai
  * @description: TODO
  * @date 2020/5/15 3:23 下午
  */

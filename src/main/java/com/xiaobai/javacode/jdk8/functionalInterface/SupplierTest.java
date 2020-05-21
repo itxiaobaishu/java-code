@@ -6,7 +6,7 @@ import com.xiaobai.javacode.entity.Something;
 import java.util.function.Supplier;
 
 /**
- * @author danyu
+ * @author xiaobai
  * @description: TODO
  * @date 2020/5/15 3:13 下午
  */

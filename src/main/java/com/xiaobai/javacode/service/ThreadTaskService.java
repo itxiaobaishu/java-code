@@ -5,7 +5,7 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 /**
- * @author danyu
+ * @author xiaobai
  * @description: 线程异步执行service
  * @date 2020/5/20 4:40 下午
  */

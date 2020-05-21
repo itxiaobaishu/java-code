@@ -4,7 +4,7 @@ import java.util.Objects;
 import java.util.function.Predicate;
 
 /**
- * @author danyu
+ * @author xiaobai
  * @description: 断言测试类
  * @date 2020/5/15 2:37 下午
  */

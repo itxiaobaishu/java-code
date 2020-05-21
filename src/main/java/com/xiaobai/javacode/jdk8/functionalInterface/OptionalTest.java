@@ -5,7 +5,7 @@ import com.xiaobai.javacode.entity.Person;
 import java.util.Optional;
 
 /**
- * @author danyu
+ * @author xiaobai
  * @description: Optional不是一个函数式接口
  * @date 2020/5/15 3:22 下午
  */

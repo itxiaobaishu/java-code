@@ -5,7 +5,7 @@ import com.xiaobai.javacode.entity.Something;
 import java.util.function.Function;
 
 /**
- * @author danyu
+ * @author xiaobai
  * @description: TODO
  * @date 2020/5/15 2:40 下午
  */
