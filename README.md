@@ -15,3 +15,5 @@
 7.新增jdk8的函数式接口测试类(包路径：com.xiaobai.javacode.jdk8.functionalInterface)
 
 8.自定义线程池异步调用方法(涉及的类ThreadTaskService、ThreadPoolTaskConfig、JavaCodeApplicationTests类中的test12和test34方法)
+
+9.优化System.currentTimeMillis()方法(包路径：com.xiaobai.javacode.systimestamp)
