@@ -1,6 +1,7 @@
 package com.xiaobai.javacode;
 
 import com.xiaobai.javacode.config.PropertyConfig;
+import com.xiaobai.javacode.init.InitService;
 import com.xiaobai.javacode.service.ThreadTaskService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -41,6 +42,22 @@ public class JavaCodeApplicationTests {
         threadTaskService.sendMessage3();
         threadTaskService.sendMessage4();
 
+    }
+
+
+    @Autowired
+    private InitService initService;
+
+    /**
+     * 初始化方法测试
+     * 测试结果：----------PostConstruct init --------
+     *          ----------InitializingBean afterPropertiesSet() init --------
+     *          ----------init-method --------
+     *          ----------otherMethod --------
+     */
+    @Test
+    public void initTest() {
+        initService.otherMethod();
     }
 
 }

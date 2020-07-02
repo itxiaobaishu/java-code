@@ -17,3 +17,5 @@
 8.自定义线程池异步调用方法(涉及的类ThreadTaskService、ThreadPoolTaskConfig、JavaCodeApplicationTests类中的test12和test34方法)
 
 9.优化System.currentTimeMillis()方法(包路径：com.xiaobai.javacode.systimestamp)
+
+10.sping三种初始化方法执行顺序验证，涉及到的包(com.xiaobai.javacode.init.InitService、JavaCodeApplicationTests测试类中的initTest())
