@@ -19,3 +19,5 @@
 9.优化System.currentTimeMillis()方法(包路径：com.xiaobai.javacode.systimestamp)
 
 10.sping三种初始化方法执行顺序验证，涉及到的包(com.xiaobai.javacode.init.InitService、JavaCodeApplicationTests测试类中的initTest())
+
+11.synchronized关键字的使用示例(com.xiaobai.javacode.sync包下的测试类)
