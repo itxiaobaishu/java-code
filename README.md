@@ -25,3 +25,7 @@
 12.常用设计模式代码示例(详见desigMode包)
 
 13.appium测试(com.xiaobai.javacode.appium.AppiumHelloTest)
+
+14.枚举特性，消除if/eles(示例见包com.xiaobai.javacode.enumspeciality.ifelse)
+
+15.枚举实现单例(com.xiaobai.javacode.enumspeciality.singleton)

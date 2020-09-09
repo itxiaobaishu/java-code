@@ -24,17 +24,18 @@ public class AppiumHelloTest {
         DesiredCapabilities cap = new DesiredCapabilities();
         cap.setCapability(CapabilityType.BROWSER_NAME, "");
         cap.setCapability("platformName", "Android"); //指定测试平台
-        cap.setCapability("deviceName", "0605edb8db97ee23"); //指定测试机的ID,通过adb命令`adb devices`获取
-        cap.setCapability("platformVersion", "4.4");
+        cap.setCapability("deviceName", "127.0.0.1:5555"); //指定测试机的ID,通过adb命令`adb devices`获取
+        cap.setCapability("platformVersion", "6.0.1");
 
         //将上面获取到的包名和Activity名设置为值
-        cap.setCapability("appPackage", "com.android.calculator2");
-        cap.setCapability("appActivity", "com.android.calculator2.Calculator");
+        cap.setCapability("appPackage", "com.tencent.mm");
+        cap.setCapability("appActivity", ".ui.LauncherUI");
 
         //A new session could not be created的解决方法
-        cap.setCapability("appWaitActivity","com.android.calculator2.Calculator");
+        cap.setCapability("appWaitActivity",".ui.LauncherUI");
         //每次启动时覆盖session，否则第二次后运行会报错不能新建session
         cap.setCapability("sessionOverride", true);
+        cap.setCapability("noReset", true);
 
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
     }
@@ -42,14 +43,19 @@ public class AppiumHelloTest {
     @Test
     public void plus(){
 
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         //获取1
-        driver.findElementById("com.android.calculator2:id/digit1").click();
+        driver.findElementById("com.tencent.mm:id/cnh").click();
         //获取+
-        driver.findElementById("com.android.calculator2:id/plus").click();
+        driver.findElementById("com.tencent.mm:id/cox").click();
         //获取2
-        driver.findElementById("com.android.calculator2:id/digit2").click();
+        driver.findElementById("com.tencent.mm:id/cn1").click();
         //获取=
-        driver.findElementById("com.android.calculator2:id/equal").click();
+//        driver.findElementById("com.android.calculator2:id/equal").click();
 
 
     }
@@ -57,7 +63,7 @@ public class AppiumHelloTest {
     @AfterClass
     public void tearDown() throws Exception {
 
-        driver.quit();
+//        driver.quit();
 
     }
 }
