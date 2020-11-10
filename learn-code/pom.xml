@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.xiaobai</groupId>
-    <artifactId>java-code</artifactId>
+    <artifactId>learn-code</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>java-code</name>
+    <name>learn-code</name>
     <description>Java project for Spring Boot</description>
 
     <properties>

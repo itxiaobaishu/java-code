@@ -1,5 +1,7 @@
 学习java过程中的记录，以代码为主。欢迎大家留言评论，有不足的地方烦请各位大佬指正，谢谢！
 
+learn-code module
+
 1.使用jdk8的stream流操作list的常用方法(包路径：com.xiaobai.javacode.jdk8.stream)
 
 2.jdk8中LocalDate、LocalTime、LocalDateTime的方法测试(包路径：com.xiaobai.javacode.jdk8.date)
@@ -29,3 +31,7 @@
 14.枚举特性，消除if/eles(示例见包com.xiaobai.javacode.enumspeciality.ifelse)
 
 15.枚举实现单例(com.xiaobai.javacode.enumspeciality.singleton)
+
+springboot-kafka module
+
+1.springboot整合kafka，启动项目，访问localhost:9090/book?name=XX模拟生产者发送消息，查看控制台模拟消费者消费消息
