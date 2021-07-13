@@ -32,6 +32,10 @@ learn-code module
 
 15.枚举实现单例(com.xiaobai.javacode.enumspeciality.singleton)
 
+16.如何打印二叉树的每个节点(com.xiaobai.javacode.algorithm.BinaryTree)
+
+17.自定义一个布隆过滤器(com.xiaobai.javacode.bloom.MyBloomFilter)
+
 springboot-kafka module
 
 1.springboot整合kafka，启动项目，访问localhost:9090/book?name=XX模拟生产者发送消息，查看控制台模拟消费者消费消息
