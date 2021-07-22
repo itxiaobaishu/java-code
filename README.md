@@ -20,22 +20,32 @@ learn-code module
 
 9.优化System.currentTimeMillis()方法(包路径：com.xiaobai.javacode.systimestamp)
 
-10.sping三种初始化方法执行顺序验证，涉及到的包(com.xiaobai.javacode.init.InitService、JavaCodeApplicationTests测试类中的initTest())
+10.sping三种初始化方法执行顺序验证，涉及到的包(InitService、JavaCodeApplicationTests测试类中的initTest())
 
 11.synchronized关键字的使用示例(com.xiaobai.javacode.sync包下的测试类)
 
 12.常用设计模式代码示例(详见desigMode包)
 
-13.appium测试(com.xiaobai.javacode.appium.AppiumHelloTest)
+13.appium测试(AppiumHelloTest)
 
 14.枚举特性，消除if/eles(示例见包com.xiaobai.javacode.enumspeciality.ifelse)
 
 15.枚举实现单例(com.xiaobai.javacode.enumspeciality.singleton)
 
-16.如何打印二叉树的每个节点(com.xiaobai.javacode.algorithm.BinaryTree)
+16.如何打印二叉树的每个节点(BinaryTree)
 
-17.自定义一个布隆过滤器(com.xiaobai.javacode.bloom.MyBloomFilter)
+17.自定义一个布隆过滤器(MyBloomFilter)
 
 springboot-kafka module
 
 1.springboot整合kafka，启动项目，访问localhost:9090/book?name=XX模拟生产者发送消息，查看控制台模拟消费者消费消息
+
+spring-boot-event module
+
+1.此模块为事件处理的实现：举例场景是保存用户数据时发送邮件，保存用户信息->发布事件->监听到事件发送邮件
+2.核心代码：定义一个事件类SendEmailEvent，定义一个事件监听RegisterUserEventListener
+3.事件异步执行的两种方式：
+    1）使用@EnableAsync和@Async两个注解
+    2）增加AsyncSpringEventConfig配置类
+4.事件条件执行的处理方式：使用condition属性，如：@EventListener(condition = "#event.userId > 5")
+5.事务处理：使用@TransactionalEventListener注解，如： @TransactionalEventListener(phase = TransactionPhase.AFTER_COMMIT,condition = "#event.userId >=5")

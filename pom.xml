@@ -13,6 +13,7 @@
 
         <module>learn-code</module>
         <module>springboot-kafka</module>
+        <module>spring-boot-event</module>
 
     </modules>
 
