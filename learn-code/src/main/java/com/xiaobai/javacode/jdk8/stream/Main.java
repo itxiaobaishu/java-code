@@ -96,8 +96,14 @@ public class Main {
         /**
          * 测试list添加序号
          */
-        List<Student> students = lambda.listAddOrder(list);
-        System.out.println(students);
+        //List<Student> students = lambda.listAddOrder(list);
+        //System.out.println(students);
+
+        /**
+         * 测试求和
+         */
+        int sum = lambda.sum(list);
+        System.out.println(sum);
 
     }
 }

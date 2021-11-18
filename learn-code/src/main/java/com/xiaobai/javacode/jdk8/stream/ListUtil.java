@@ -225,4 +225,14 @@ public class ListUtil {
         return list.stream().filter(student -> student.getName().startsWith(matchStr)).count();
     }
 
+    /**
+     * 求和
+     *
+     * @param list
+     * @return
+     */
+    public int sum(List<Student> list) {
+        return list.stream().map(Student::getAge).reduce(0, Integer::sum);
+    }
+
 }
