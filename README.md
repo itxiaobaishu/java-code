@@ -38,6 +38,8 @@ learn-code module
 
 18.行转列工具类：RowConvertColUtil, 测试类：RowConvertColUtilTest
 
+19.拷贝工具类：CopyUtil
+
 springboot-kafka module
 
 1.springboot整合kafka，启动项目，访问localhost:9090/book?name=XX模拟生产者发送消息，查看控制台模拟消费者消费消息
