@@ -10,6 +10,7 @@ import java.util.List;
  */
 public class RowConvertColUtilTest {
     private static class ScoreInfo {
+        private Integer id;
         private String stuName;
         private String subjectName;
         private Integer value;
@@ -32,10 +33,18 @@ public class RowConvertColUtilTest {
             this.value = value;
         }
 
+        public ScoreInfo(Integer id, String stuName, String subjectName, Integer value) {
+            this.id = id;
+            this.stuName = stuName;
+            this.subjectName = subjectName;
+            this.value = value;
+        }
+
         @Override
         public String toString() {
             return "ScoreInfo{" +
-                    "stuName='" + stuName + '\'' +
+                    "id=" + id +
+                    ", stuName='" + stuName + '\'' +
                     ", subjectName='" + subjectName + '\'' +
                     ", value=" + value +
                     '}';
@@ -48,20 +57,20 @@ public class RowConvertColUtilTest {
 
     private static void func2() throws Exception {
         List<ScoreInfo> scoreInfoList = new ArrayList<>();
-        scoreInfoList.add(new ScoreInfo("张三", "语文", 61));
-        scoreInfoList.add(new ScoreInfo("张三", "数学", 78));
-        scoreInfoList.add(new ScoreInfo("张三", "英语", 93));
-        scoreInfoList.add(new ScoreInfo("李四", "语文", 70));
-        scoreInfoList.add(new ScoreInfo("李四", "数学", 86));
-        scoreInfoList.add(new ScoreInfo("李四", "英语", 72));
-        scoreInfoList.add(new ScoreInfo("王五", "语文", 66));
-        scoreInfoList.add(new ScoreInfo("赵六", "语文", 91));
-        scoreInfoList.add(new ScoreInfo("王五", "数学", 88));
-        scoreInfoList.add(new ScoreInfo("赵六", "数学", 63));
-        scoreInfoList.add(new ScoreInfo("王五", "英语", 93));
-        scoreInfoList.add(new ScoreInfo("赵六", "英语", 58));
-        scoreInfoList.add(new ScoreInfo("王七", "英语", 65));
-        scoreInfoList.add(new ScoreInfo("王七", "数学", 91));
+        scoreInfoList.add(new ScoreInfo(1,"张三", "语文", 61));
+        scoreInfoList.add(new ScoreInfo(2,"张三", "数学", 78));
+        scoreInfoList.add(new ScoreInfo(3,"张三", "英语", 93));
+        scoreInfoList.add(new ScoreInfo(4,"李四", "语文", 70));
+        scoreInfoList.add(new ScoreInfo(5,"李四", "数学", 86));
+        scoreInfoList.add(new ScoreInfo(6,"李四", "英语", 72));
+        scoreInfoList.add(new ScoreInfo(7,"王五", "语文", 66));
+        scoreInfoList.add(new ScoreInfo(8,"赵六", "语文", 91));
+        scoreInfoList.add(new ScoreInfo(9,"王五", "数学", 88));
+        scoreInfoList.add(new ScoreInfo(10,"赵六", "数学", 63));
+        scoreInfoList.add(new ScoreInfo(11,"王五", "英语", 93));
+        scoreInfoList.add(new ScoreInfo(12,"赵六", "英语", 58));
+        scoreInfoList.add(new ScoreInfo(13,"王七", "英语", 65));
+        scoreInfoList.add(new ScoreInfo(14,"王七", "数学", 91));
         for (ScoreInfo scoreInfo : scoreInfoList) {
             System.out.println(scoreInfo.toString());
         }
