@@ -154,7 +154,18 @@ public class ListUtil {
      */
     public Map<Object, List<Student>> list2group(List<Student> list, String sex) {
 //        return list.stream().collect(groupingBy(Student::getSex)); //{女=[Student(id=1, name=1, age=1, sex=女), Student(id=3, name=3, age=3, sex=女)], 男=[Student(id=0, name=0, age=0, sex=男), Student(id=2, name=2, age=2, sex=男), Student(id=4, name=4, age=4, sex=男)]}
+//        Map<String, List<Integer>> collect = list.stream().collect(groupingBy(Student::getSex, mapping(Student::getAge, toList())));//{女=[Student(id=1, name=1, age=1, sex=女), Student(id=3, name=3, age=3, sex=女)], 男=[Student(id=0, name=0, age=0, sex=男), Student(id=2, name=2, age=2, sex=男), Student(id=4, name=4, age=4, sex=男)]}
         return list.stream().collect(groupingBy(student -> sex.equals(student.getSex()))); //{false=[Student(id=1, name=1, age=1, sex=女), Student(id=3, name=3, age=3, sex=女)], true=[Student(id=0, name=0, age=0, sex=男), Student(id=2, name=2, age=2, sex=男), Student(id=4, name=4, age=4, sex=男)]}
+    }
+
+    /**
+     * 根据条件把list分组
+     *
+     * @param list
+     * @return
+     */
+    public Map<Object, List<Integer>> list2group(List<Student> list) {
+        return list.stream().collect(groupingBy(Student::getSex, mapping(Student::getAge, toList())));//{女=[1, 3], 男=[0, 2, 4]}
     }
 
     /**

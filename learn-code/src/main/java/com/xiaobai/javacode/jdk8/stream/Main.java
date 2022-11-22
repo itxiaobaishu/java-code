@@ -4,6 +4,7 @@ import com.xiaobai.javacode.entity.Student;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author xiaobai
@@ -102,8 +103,14 @@ public class Main {
         /**
          * 测试求和
          */
-        int sum = lambda.sum(list);
-        System.out.println(sum);
+        //int sum = lambda.sum(list);
+        //System.out.println(sum);
+
+        /**
+         * 测试分组
+         */
+        Map<Object, List<Integer>> objectListMap = lambda.list2group(list);
+        System.out.println(objectListMap);
 
     }
 }
