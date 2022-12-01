@@ -3,6 +3,9 @@ package com.xiaobai.javacode.jdk8.stream;
 import com.xiaobai.javacode.entity.Student;
 
 import java.util.*;
+import java.util.function.BinaryOperator;
+import java.util.function.Function;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -166,6 +169,28 @@ public class ListUtil {
      */
     public Map<Object, List<Integer>> list2group(List<Student> list) {
         return list.stream().collect(groupingBy(Student::getSex, mapping(Student::getAge, toList())));//{女=[1, 3], 男=[0, 2, 4]}
+    }
+
+    /**
+     * 根据条件把list转map
+     *
+     * @param list
+     * @return
+     */
+    public Map<Object, Student> list2entityMap(List<Student> list) {
+        Map<Object, Student> collect = list.stream().collect(toMap(Student::getSex, Function.identity(), BinaryOperator.maxBy(Comparator.comparing(Student::getAge))));//{女=Student(id=3, name=3, age=3, sex=女, orderId=null), 男=Student(id=4, name=4, age=4, sex=男, orderId=null)}
+        return collect;
+    }
+
+    /**
+     * list转map（key value是实体的两个属性）
+     *
+     * @param list
+     * @return
+     */
+    public Map<Object, Object> list2entityFieldMap(List<Student> list) {
+        Map<Object, Object> collect = list.stream().collect(groupingBy(Student::getSex, collectingAndThen(toList(), s -> s.stream().max(Comparator.comparing(Student::getAge)).get().getAge())));//{女=3, 男=4}
+        return collect;
     }
 
     /**

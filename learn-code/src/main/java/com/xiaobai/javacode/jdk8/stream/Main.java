@@ -109,8 +109,14 @@ public class Main {
         /**
          * 测试分组
          */
-        Map<Object, List<Integer>> objectListMap = lambda.list2group(list);
-        System.out.println(objectListMap);
+        //Map<Object, List<Integer>> objectListMap = lambda.list2group(list);
+        //System.out.println(objectListMap);
+
+        Map<Object, Student> objectStudentMap = lambda.list2entityMap(list);
+        System.out.println(objectStudentMap);
+
+        Map<Object, Object> objectObjectMap = lambda.list2entityFieldMap(list);
+        System.out.println(objectObjectMap);
 
     }
 }
