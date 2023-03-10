@@ -4,6 +4,7 @@ import lombok.Builder;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 /**
  * @author xiaobai
@@ -26,4 +27,6 @@ public class Student implements Serializable {
 
     //排序的字段
     private Integer orderId;
+
+    private LocalDateTime createTime;
 }

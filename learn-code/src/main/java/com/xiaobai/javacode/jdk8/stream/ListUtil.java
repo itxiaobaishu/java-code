@@ -1,6 +1,7 @@
 package com.xiaobai.javacode.jdk8.stream;
 
 import com.xiaobai.javacode.entity.Student;
+import org.apache.commons.lang3.time.DateFormatUtils;
 
 import java.util.*;
 import java.util.function.BinaryOperator;
@@ -39,6 +40,18 @@ public class ListUtil {
      */
     public Map<String, Student> list2map(List<Student> list) {
         return list.stream().collect(Collectors.toMap(Student::getId, student -> student));
+    }
+
+    /**
+     * list 根据字段分组，并对key、value处理
+     * @param list
+     * @return
+     */
+    public Map<String, List<Student>> list2mapList(List<Student> list) {
+        Map<String, List<Student>> map = list.stream()
+                .collect(Collectors.groupingBy(key -> key.getCreateTime().toLocalDate().toString() + " 周一",
+                        Collectors.mapping(value -> value, Collectors.toList())));
+        return map;
     }
 
     /**

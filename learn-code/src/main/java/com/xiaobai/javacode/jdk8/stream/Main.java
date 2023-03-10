@@ -2,6 +2,7 @@ package com.xiaobai.javacode.jdk8.stream;
 
 import com.xiaobai.javacode.entity.Student;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -24,6 +25,7 @@ public class Main {
             } else {
                 student.setSex("女");
             }
+            student.setCreateTime(LocalDateTime.now().plusDays(i));
             list.add(student);
         }
 
@@ -112,11 +114,14 @@ public class Main {
         //Map<Object, List<Integer>> objectListMap = lambda.list2group(list);
         //System.out.println(objectListMap);
 
-        Map<Object, Student> objectStudentMap = lambda.list2entityMap(list);
-        System.out.println(objectStudentMap);
+        //Map<Object, Student> objectStudentMap = lambda.list2entityMap(list);
+        //System.out.println(objectStudentMap);
 
-        Map<Object, Object> objectObjectMap = lambda.list2entityFieldMap(list);
-        System.out.println(objectObjectMap);
+        //Map<Object, Object> objectObjectMap = lambda.list2entityFieldMap(list);
+        //System.out.println(objectObjectMap);
+
+        Map<String, List<Student>> stringListMap = lambda.list2mapList(list);
+        System.out.println(stringListMap);
 
     }
 }
