@@ -53,3 +53,7 @@ spring-boot-event module
     2）增加AsyncSpringEventConfig配置类
 4.事件条件执行的处理方式：使用condition属性，如：@EventListener(condition = "#event.userId > 5")
 5.事务处理：使用@TransactionalEventListener注解，如： @TransactionalEventListener(phase = TransactionPhase.AFTER_COMMIT,condition = "#event.userId >=5")
+
+
+spring-boot-bean-searcher module
+bean-searcher的一次简单实践
