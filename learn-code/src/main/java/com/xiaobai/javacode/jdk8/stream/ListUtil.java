@@ -284,4 +284,21 @@ public class ListUtil {
         return list.stream().map(Student::getAge).reduce(0, Integer::sum);
     }
 
+    /**
+     * 分组后把每组中的最大值组成list
+     *
+     * @param list
+     * @return
+     */
+    public List<Student> list2List(List<Student> list) {
+        System.out.println(list);
+        Map<String, Student> collect = list.stream().collect(
+                Collectors.groupingBy(Student::getSex,
+                        Collectors.collectingAndThen(Collectors.reducing((c1, c2) -> c1.getAge().intValue() > c2.getAge().intValue() ? c1 : c2),
+                                Optional::get)));
+        list = new ArrayList<>(collect.values());
+
+        return list;
+    }
+
 }
