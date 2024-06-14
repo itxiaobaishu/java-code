@@ -1,0 +1,6 @@
+source:
+  flag: true
+db:
+  token: 123456
+isopen:
+  open: open
